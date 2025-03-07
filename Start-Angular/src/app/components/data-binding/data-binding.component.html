@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-6">
+        <h2>1. Interpolation  (one way DataBinding)</h2>
+
+        <p>firstName => {{firstName}}  </p>
+        <p>isActive => {{isActive}}  </p>
+    </div>
+
+    <div class="col-6">
+        <h2>2. Property Binding  (one way DataBinding)</h2>
+
+        <input type="text" [value]="firstName">
+        <br>
+        <input type="text" [value]="myPlaceholder ">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showWe1comeMessage()" >
+            show welcome text 
+        </button>
+    </div>
+    <div class="col-3">
+        <select (change)="onCityChanges()">
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="surat">surat</option>
+            <option value="vadodara">vadodara</option>
+        </select>
+    </div>
+</div>
+<br><br><br>
+<div class="row">
+    <div class="col-3">
+        <h2>3.  Two-Way Binding</h2>
+        <input type="text" [(ngModel)] ="firstName" >
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="selectedCity">
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="surat">surat</option>
+            <option value="vadodara">vadodara</option> 
+        </select>
+        - {{selectedCity}}
+    </div>
+</div>
