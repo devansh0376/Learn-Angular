@@ -23,7 +23,7 @@ export class LinkedSignalComponent {
 
   user=signal({id:111 , name:"Devansh"}) //main signal
 
-  //email depends on user signal whenever id will change and it not equal to pre
+  //email depends on user signal whenever id will change and it not equal to 
   //previous id we recompute the whole email id 
   email=linkedSignal({ //derive signal
     source :this.user,
